@@ -25,7 +25,7 @@
     "fix:eslint": "eslint . -c eslint.config.mjs --fix",
     "lint:eslint": "eslint . -c eslint.config.mjs",
     "lint:prettier": "prettier --check src",
-    "generate-schema": "typescript-json-schema --required src/config.ts ConfigInterface -o schema/Configuration.json"
+    "generate-schema": "typescript-json-schema --required --esModuleInterop src/config.ts Config -o schema/Configuration.json"
   },
   "devDependencies": {
     "@book000/eslint-config": "1.17.0",

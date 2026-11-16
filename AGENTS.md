@@ -43,7 +43,7 @@ CI は [book000/templates](https://github.com/book000/templates) の共通ワー
 - ロジックを変更したら、可能な限りテストを追加・更新する。
 - `data/config.json` の Webhook URL やトークンなどの機密情報をコミットしない。ログ出力に認証情報や個人情報を含めない。
 - HTTP 取得はネイティブ `fetch`、HTML 解析は `cheerio` を使う。
-- 注意: `pnpm generate-schema` は参照先の型 `ConfigInterface` が `src/config.ts` に存在しないため、現状は失敗する。設定構造を変更しても `schema/Configuration.json` は管理されていない。
+- 注意: `pnpm generate-schema` は `src/config.ts` の `Config` 型から JSON Schema を生成し、`schema/Configuration.json` に出力する。出力物はリポジトリで管理されておらず、設定構造を変更しても自動では更新されない。
 
 ## PR 前の確認
 
